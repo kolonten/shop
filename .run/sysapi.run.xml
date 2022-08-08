@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="system-api" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="gogoshop" />
+    <working_directory value="$PROJECT_DIR$/service/system/adminapi" />
+    <kind value="PACKAGE" />
+    <package value="gogoshop/service/system/adminapi" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$/service/system/rpc/system.go" />
+    <method v="2" />
+  </configuration>
+</component>
