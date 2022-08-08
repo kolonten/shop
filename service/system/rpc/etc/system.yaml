@@ -1,21 +1,29 @@
-Name: sys.rpc
-ListenOn: 127.0.0.1:8080
+Name: system.rpc
+ListenOn: 127.0.0.1:9090
 Etcd:
   Hosts:
     - 127.0.0.1:2379
-  Key: sys.rpc
+  Key: system.rpc
 
 Mysql:
-  Datasource: root:123456@tcp(127.0.0.1:3306)/gozero?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+  Datasource: root:123456@tcp(127.0.0.1:3306)/gogo?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+
+CacheRedis:
+  - Host: 127.0.0.1:6379
+    Type: node
+    Pass:
 
 JWT:
   AccessSecret: ad879037-c7a4-4063-9236-6bfc35d54b7d
   AccessExpire: 86400
 
 Log:
-  Mode: file
-  Path: logs/sys
+  Mode: console
+  Path: logs/system
+  Level: info
+  Encoding: plain
+
 Prometheus:
   Host: 127.0.0.1
-  Port: 8180
+  Port: 9190
   Path: /metrics
